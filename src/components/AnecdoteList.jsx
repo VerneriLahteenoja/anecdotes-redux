@@ -9,8 +9,8 @@ const AnecdoteList = () => {
         anecdote.content.includes(state.filter)
       )
     )
-  }
-  )
+  })
+  
   const dispatch = useDispatch()
 
   const handleLike = (id) => {
