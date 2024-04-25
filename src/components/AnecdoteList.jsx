@@ -14,11 +14,8 @@ const AnecdoteList = () => {
   const dispatch = useDispatch()
 
   const handleLike = (id) => {
-    dispatch(setNotification(`you voted ${anecdotes.find(a => a.id === id).content}`))
+    dispatch(setNotification(`you voted ${anecdotes.find(a => a.id === id).content}`, 5))
     dispatch(addVote(id))
-    setTimeout(() => {
-      dispatch(setNotification(''))
-    }, 5000)
   }
   
 
